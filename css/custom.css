@@ -1,0 +1,758 @@
+/*--------------------*/
+/*0.0 - GERAL*/
+/*--------------------*/
+
+
+/*Tipografia*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+* {
+	font-family: 'Roboto', sans-serif;
+}
+p,
+label,
+h1,h2,h3,h4,h5,h6 {
+	line-height: 24px;
+}
+
+.box {
+	float: left;
+	width: 100%;
+	margin: 0 0 12px;
+	position: relative;
+}
+.box:last-child {
+	margin: 0;
+}
+
+
+/*Inputs, Selects e Textareas*/
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+	outline: none !important;
+	border: 1px solid #555 !important;
+	box-shadow: none !important;
+}
+
+
+
+
+
+
+
+
+
+/*--------------------*/
+/*1.0 - PAGINA LISTAGEM*/
+/*--------------------*/
+
+
+
+
+
+/*--------------------*/
+/*1.1 - BUSCA*/
+.box-busca {
+	position: relative;
+	margin: 0 -15px 80px;
+	border-bottom: 1px solid #ccc;
+}
+.box-busca .sub-titulo a {
+	cursor: pointer;
+	color: #000;
+}
+.box-busca .sub-titulo a:hover {
+	text-decoration: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.listagem .box-busca .sub-titulo .glyphicon {
+	font-size: 18px;
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+
+.box-busca .sub-titulo a:before {
+	content: "Facilite sua busca utilizando nossos filtros de busca.";
+	opacity: 0;
+	transition: all 0.9s;
+	position: absolute;
+	top: 29px;
+	left: 125px;
+	font-size: 13px;
+}
+.box-busca .sub-titulo:hover a:before {
+	opacity: 1;
+}
+
+
+
+/*--------------------*/
+/*1.1.1 - Campos da Busca*/
+#box-filtros-busca {
+	display: none;
+	margin: 0 0 20px;
+	float: left;
+	width: 100%;
+}
+#box-filtros-busca .box2 {
+	display: none;
+}
+
+
+
+
+
+/*--------------------*/
+/*1.2 - FILTROS*/
+.box-opt.qtd .opts {
+	float: right;
+}
+.box-opt.qtd .opts > p.first-child {
+	float: left;
+}
+.box-opt.qtd .opts > p.last-child {
+	float: right;
+}
+.box-opt.qtd .opts > a {
+	float: left;
+	display: inline-block;
+	margin: 9px 5px 0;
+	color: #000;
+}
+
+.box-filtros {
+	margin: 0 -15px 20px;
+	position: relative;
+}
+.box-filtros .box-opt {
+	padding: 0;
+}
+.box-filtros .box-opt p,
+.box-filtros .box-opt select {
+	float: left;
+}
+.box-filtros .box-opt p {
+	margin: 7px 0 0;
+}
+.box-filtros .box-opt select {
+	margin: 0 0 0 15px;
+}
+.box-opt-ordem {
+	border: 1px solid #ccc;
+	display: inline-block;
+	border-radius: 5px;
+	height: 32px;
+	overflow: hidden;
+	margin: 4px 0 0 85px;
+	position: absolute;
+	background: #FFF;
+	transition: all 0.2s;
+	display: flex;
+	flex-direction: column;
+}
+.box-opt-ordem:hover {
+	height: 122px !important;
+}
+.box-opt-ordem > a {
+	display: block;
+	color: #000;
+	padding: 6px 10px;
+	transition: all 0.2s;
+	background: #FFF;
+	order: 2;
+}
+.box-opt-ordem > a:hover {
+	background: #ccc;
+	text-decoration: none;
+}
+.pagination {
+	padding: 0;
+	margin: 0;
+	float: right;
+}
+.pagination span {
+	float: left;
+    position: relative;
+    top: 2px;
+}
+/*pagina atual*/
+.pagination>li>span {
+	color: #000;
+	font-weight: bold;
+	border-radius: 100%;
+	border: 1px solid transparent;
+	padding: 3px 9px;
+}
+.pagination>li>span:hover {
+	cursor: default;
+	background: transparent;
+	color: #000;
+	border: 1px solid transparent;
+}
+/*paginas para navegar*/
+.pagination>li>a {
+	color: #000;
+	transition: 0.5s;
+	border-radius: 100%;
+	border: 1px solid transparent;
+	padding: 3px 9px;
+}
+.pagination>li>a:hover {
+	background: #ddd;
+	border: 1px solid #ddd;
+	color: #000;
+	border-radius: 100%;
+}
+/*setinhas*/
+.pagination .prev,
+.pagination .next {
+	border: none;
+	margin: 0 5px;
+	font-size: 11px;
+	padding: 6px 8px;
+	border-radius: 100%;
+	border: 1px solid transparent;
+}
+@media screen and (max-width: 679px) {
+
+}
+
+
+
+
+
+/*--------------------*/
+/*1.3 - BOTOES DE ACOES*/
+.box-acoes {
+	margin: 0 -15px;
+	padding: 15px 0;
+	border-top: 1px solid #ccc;
+	position: relative;
+}
+.box-acoes.out {
+	padding: 0;
+	border-top: none;
+}
+.box-acoes > div {
+	padding: 0;
+}
+.box-acoes .opcoes {
+	padding: 7px 0;
+}
+.box-acoes .opcoes .separador {
+	margin: 0 10px;
+	display: inline-block;
+}
+.box-acoes .acoes {
+	width: auto;
+	position: absolute;
+	top: 15px;
+	right: 0;
+}
+.box-acoes .acoes a {
+	display: inline-block;
+	margin: 0 10px 0;
+	padding: 7px 12px;
+	transition: all 0.5s;
+	border-radius: 2px;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+.box-acoes .acoes a:hover {
+	text-decoration: none;
+}
+.box-acoes .acoes a:last-child {
+	margin: 0 0 0 10px;
+}
+
+.box-acoes .acoes span {
+	display: inline-block;
+	margin: 0 5px 0 0;
+}
+.box-acoes .acoes .adicionar {
+	color: #FFF;
+	background: #0d964b;
+}
+.box-acoes .acoes .adicionar:hover {
+	background: #047035;
+}
+.box-acoes .acoes .excluir {
+	color: #CD0000;
+	display: inline-block;
+}
+.box-acoes .acoes .excluir:hover {
+	background: #CD0000;
+	color: #FFF;
+}
+
+/*Campo de Adicionar*/
+#box-frm-adc {
+	display: none;
+}
+
+
+
+
+
+/*--------------------*/
+/*1.4 - TABELA DE INFORMACOES*/
+
+tbody tr {
+	transition: all 0.5s;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+tbody tr:last-child {
+	border-bottom: 1px solid #ccc;
+}
+tbody tr:hover {
+	background-color: #d3d1d1 !important;
+}
+
+
+.acoes-inline thead tr th {
+	padding: 15px;
+	background: #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+
+.box-tabela .acoes {
+	display: inline-block;
+	padding: 7px 12px;
+	transition: all 0.5s;
+	border-radius: 2px;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+.box-tabela .acoes span {
+	display: inline-block;
+	margin: 0 5px 0 0;
+}
+.box-tabela .editar {
+	color: #1E90FF;
+}
+.box-tabela .editar:hover {
+	background: #1E90FF;
+	color: #FFF;
+	text-decoration: none;
+}
+.box-tabela .excluir {
+	color: #CD0000;
+}
+.box-tabela .excluir:hover {
+	background: #CD0000;
+	color: #FFF;
+}
+
+
+
+
+
+/*--------------------*/
+/*1.5 - MODAL PARA ACOES*/
+.modal.in .modal-dialog {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -245px 0 0 -300px;
+}
+
+/*Cabecalho*/
+.modal .modal-header {
+	border-bottom: none;
+	padding: 55px 55px 0;
+}
+.modal .modal-header .modal-title {
+	font-size: 22px;
+	text-align: center;
+}
+.modal .modal-header .modal-title .destaque {
+	border-bottom: 1px solid #000;
+}
+.modal-header .close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+.modal-header .close:hover span {
+	color: #000;
+}
+
+/*Conteudo*/
+.modal .modal-body {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	padding: 55px;
+}
+.modal .modal-body .box-frm-campos {
+	float: left;
+	width: 100%;
+	clear: both;
+	margin: 0 0 40px;
+	position: relative;
+}
+.modal .modal-body .box-frm-campos:last-child {
+	margin: 0;
+}
+.modal .modal-body .box-frm-campos .legenda,
+.modal .modal-body .box-frm-campos .legenda2 {
+	font-size: 11px;
+	font-weight: normal;
+	position: absolute;
+	top: -15px;
+	bottom: 10px;
+	left: 15px;
+}
+.modal .modal-body .box-frm-campos .legenda2 {
+	font-size: 14px;
+}
+.modal .modal-body .box-frm-campos .box .legenda,
+.modal .modal-body .box-frm-campos .box .legenda2 {
+	position: relative;
+	top: 0;
+	left: 0;
+	bottom: 0;
+}
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+	top: -10px;
+	bottom: 10px;
+	left: 15px;
+	font-size: 11px;
+	opacity: 1;
+}
+.floating-label {
+	position: absolute;
+	left: 20px;
+	top: 8px;
+	transition: 0.2s ease all;
+}
+.modal .modal-body .box-frm-campos select,
+.modal .modal-body .box-frm-campos textarea,
+.modal .modal-body .box-frm-campos input[type="text"],
+.modal .modal-body .box-frm-campos input[type="password"] {
+	padding: 0 7px;
+	font-size: 20px;
+	border: 1px solid #000;
+	border-radius: 0 !important;
+	font-size: 20px;
+	color: #000;
+	width: 350px;
+	height: 35px;
+	position: relative;
+	z-index: 2;
+	background: transparent;
+}
+.modal .modal-body .box-frm-campos input[type="text"],
+.modal .modal-body .box-frm-campos input[type="password"] {
+	border: none;
+	border-bottom: 1px solid #000;
+}
+.modal .modal-body .box-frm-campos input[type="text"]:focus,
+.modal .modal-body .box-frm-campos input[type="password"]:focus {
+	outline: none !important;
+	border: none !important;
+	border-bottom: 1px solid #000 !important;
+}
+.modal .modal-body .box-frm-campos input[type="file"] {
+	margin: 10px 0 0;
+}
+.modal .modal-body .box-frm-campos textarea {
+	margin: 10px 0 0;
+	padding: 5px;
+	min-height: 100px;
+}
+.modal .modal-body .box-frm-campos select {
+	height: 32px;
+	margin: 10px 0 0;
+}
+.modal ::-webkit-input-placeholder {
+	color: #555 !important;
+	font-size: 15px !important;
+}
+
+.modal :-moz-placeholder {
+	color: #555 !important;
+	font-size: 15px !important;
+}
+
+.modal ::-moz-placeholder {
+	color: #555 !important;
+	font-size: 15px !important;
+}
+
+.modal :-ms-input-placeholder {
+	color: #555 !important;
+	font-size: 15px !important;
+}
+.modal .modal-body .box-frm-campos .btn {
+	padding: 8px 22px;
+	margin: 35px 0 0;
+	transition: all 0.5s;
+	border-radius: 2px;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+.modal .modal-body .box-frm-campos input[type="submit"] {
+	border: 1px solid #ddd;
+	background: #1E90FF;
+	color: #FFF;
+	float: right;
+	margin-right: 15px;
+}
+.modal .modal-body .box-frm-campos input[type="submit"]:hover {
+	background: #0360ba;
+}
+.modal .modal-body .box-frm-campos .fechar {
+	background: #FFF;
+	border: 1px solid #000;
+	color: #000;
+	float: right;
+}
+.modal .modal-body .box-frm-campos .fechar:hover {
+	background: #333;
+	border-color: #333;
+	color: #FFF;
+}
+
+/*--------------------*/
+/*Professor*/
+.modal-professor .box {
+	width: 50%;
+	float: left;
+	margin: 20px 0 0;
+}
+.modal-professor .box-frm-campos .legenda2 {
+	width: auto !important;
+	margin: 5px 0 0 11px !important;
+}
+.modal .modal-professor .box-frm-campos > .legenda,
+.modal .modal-professor .box-frm-campos > .legenda2 {
+	font-size: 15px;
+}
+.modal-professor input[type="radio"] {
+	float: left;
+	visibility: hidden;
+}
+.modal-professor input[type="radio"]:before {
+	content: "";
+	display: block;
+	width: 14px;
+	height: 14px;
+	border: 1px solid #000;
+	border-radius: 100%;
+	visibility: visible;
+	margin: 5px 5px 0;
+	transition: all 0.4s;
+	cursor: pointer;
+	background-image: url(../img/checked.png);
+	background-position: 15px center;
+	background-repeat: no-repeat;
+}
+.modal-professor input[type="radio"]:hover:before,
+.modal-professor input[type="radio"]:checked:before {
+	border-color: #0d964b;
+	background-position: -2px center;
+}
+
+/*--------------------*/
+/*Questoes*/
+.modal-questao input[type="text"],
+.modal-questao input[type="password"],
+.modal-questao textarea,
+.modal-questao select {
+	width: 100% !important;
+}
+.modal .modal-body .box-frm-campos {
+	clear: none;
+}
+.modal .modal-body .box-frm-campos:nth-child(odd) {
+	margin: 0 40px 40px 0;
+}
+.modal-questao .ativo,
+.modal-questao .tipo-questao {
+	width: 30% !important;
+}
+.modal-questao .professor,
+.modal-questao .assunto {
+	width: calc(70% - 40px) !important;
+}
+/*Alternativas*/
+.modal-questao .alternativa {
+	position: relative;
+}
+.modal-questao .alternativa .legenda2 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: unset !important;
+	width: auto !important;
+}
+.modal-questao .alternativa input[type="text"] {
+	width: 90% !important;
+	float: left;
+	margin: 0 0 20px;
+}
+.modal-questao .alternativa input[type="radio"] {
+	width: 5% !important;
+	float: right;
+	visibility: hidden;
+}
+.modal-questao .alternativa input[type="radio"]::before {
+	content: "";
+	display: block;
+	width: 14px;
+	height: 14px;
+	border: 1px solid #000;
+	visibility: visible !important;
+	margin: 5px 5px 0;
+	transition: all 0.4s;
+	cursor: pointer;
+	background-image: url(../img/checked.png);
+	background-position: 15px center;
+	background-repeat: no-repeat;
+}
+.modal-questao .alternativa input[type="radio"]:hover:before,
+.modal-questao .alternativa input[type="radio"]:checked:before {
+	border-color: #0d964b;
+	background-position: -2px center;
+}
+/*Dificuldade e Ativo*/
+.modal-questao .dificuldade .box,
+.modal-questao .ativa .box {
+	width: 33.333%;
+	float: left;
+}
+.modal-questao .dificuldade .legenda2,
+.modal-questao .ativa .legenda2 {
+	width: auto !important;
+	margin: 5px 0 0 16px !important;
+	cursor: pointer;
+}
+.modal-questao .dificuldade input[type="radio"],
+.modal-questao .ativa input[type="radio"] {
+	width: 5% !important;
+	float: left;
+	visibility: hidden;
+	position: relative;
+}
+@-moz-document url-prefix() {
+    .modal-questao .alternativa input[type="radio"] {
+        width: 5% !important;
+        float: right;
+        visibility: visible;
+    }
+    .modal-questao .dificuldade input[type="radio"],
+    .modal-questao .ativa input[type="radio"] {
+        width: 5% !important;
+        float: left;
+        visibility: visible;
+        position: relative;
+        margin: 10px 0 0;
+    }
+}
+.modal-questao .dificuldade input[type="radio"]:before,
+.modal-questao .ativa input[type="radio"]:before {
+	content: "";
+	display: block;
+	width: 14px;
+	height: 14px;
+	border: 1px solid #000;
+	border-radius: 100%;
+	visibility: visible;
+	margin: 5px 5px 0;
+	transition: all 0.4s;
+	cursor: pointer;
+	background-image: url(../img/checked.png);
+	background-position: 15px center;
+	background-repeat: no-repeat;
+}
+.modal-questao .dificuldade input[type="radio"]:hover:before,
+.modal-questao .dificuldade input[type="radio"]:checked:before,
+.modal-questao .ativa input[type="radio"]:hover:before,
+.modal-questao .ativa input[type="radio"]:checked:before {
+	border-color: #0d964b;
+	background-position: -2px center;
+}
+
+
+
+
+
+/*--------------------*/
+/*1.6 - MENSAGENS*/
+.msg {
+	border: 1px solid;
+	padding: 20px;
+	text-align: center;
+	font-size: 16px;
+	width: 700px;
+	position: relative;
+	left: 50%;
+	margin: 20px 0 20px -352px;
+	border-radius: 5px;
+}
+.msg p {
+	margin: 0;
+}
+.msg.erro {
+	background: #a31010;
+	color: #FFF;
+}
+.msg.sucesso {
+	background: #0d964b;
+	color: #FFF;
+}
+
+
+
+
+
+
+
+
+
+
+/*--------------------*/
+/*MENU*/
+/*--------------------*/
+.box-menu {
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin: 30px 0 0;
+}
+.box-menu a {
+	font-size: 30px;
+	background: #2d7d69;
+	color: #FFF;
+	border-radius: 5px;
+	padding: 30px 0;
+	margin: 0px 24px 30px;
+	width: calc(50% - 50px);
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: sans-serif;
+}
+.box-menu a span {
+	display: inline-block;
+	margin: 0 15px 0 0;
+}
