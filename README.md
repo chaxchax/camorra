@@ -1,2 +1,2 @@
 # camorra
-PI 2 - Só os manos ZUCAS.ltda
+PI 2 - Senac - Senaquiz
